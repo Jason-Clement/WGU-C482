@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" minHeight="400.0" minWidth="400.0" prefHeight="500.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="c482.FXMLMainController">
+  <children>
+    <VBox id="VBox" alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <SplitPane id="SplitPane" dividerPositions="0.5" VBox.vgrow="ALWAYS">
+          <items>
+            <AnchorPane id="AnchorPane" prefHeight="-1.0">
+              <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Parts" x="8.0" y="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="0.0">
+                  <font>
+                    <Font name="System Bold" size="20.0" fx:id="x1" />
+                  </font>
+                </Text>
+                <HBox id="HBox" alignment="CENTER" spacing="4.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="4.0">
+                  <children>
+                    <TextField fx:id="partsSearchBox" prefWidth="150.0" />
+                    <Button fx:id="partsSearchButton" mnemonicParsing="false" onAction="#selectPartsFilter" prefWidth="-1.0" text="Search" />
+                  </children>
+                  <padding>
+                    <Insets />
+                  </padding>
+                </HBox>
+                <TableView id="PartsTable" fx:id="partsTable" prefHeight="528.0" prefWidth="396.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0">
+                  <columns>
+                    <TableColumn text="ID" fx:id="partsIDColumn" />
+                    <TableColumn text="Name" fx:id="partsNameColumn" />
+                    <TableColumn text="Inventory Level" fx:id="partsInventoryColumn" />
+                    <TableColumn text="Price/Cost per Unit" fx:id="partsPriceColumn" />
+                  </columns>
+                </TableView>
+                <HBox prefHeight="-1.0" prefWidth="-1.0" spacing="4.0" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="8.0">
+                  <children>
+                    <Button fx:id="partsAddButton" mnemonicParsing="false" onAction="#addPart" text="Add" />
+                    <Button fx:id="partsModifyButton" mnemonicParsing="false" onAction="#modifyPart" text="Modify" />
+                    <Button fx:id="partsDeleteButton" mnemonicParsing="false" onAction="#deletePart" text="Delete" />
+                  </children>
+                </HBox>
+              </children>
+              <padding>
+                <Insets bottom="8.0" fx:id="x2" />
+              </padding>
+            </AnchorPane>
+            <AnchorPane id="AnchorPane" padding="$x2" prefHeight="-1.0">
+              <children>
+                <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Products" x="8.0" y="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="0.0" />
+                <HBox id="null" alignment="CENTER" spacing="4.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="4.0">
+                  <children>
+                    <TextField fx:id="productsSearchBox" prefWidth="150.0" />
+                    <Button fx:id="productsSearchButton" mnemonicParsing="false" onAction="#selectProductsFilter" prefWidth="-1.0" text="Search" />
+                  </children>
+                  <padding>
+                    <Insets />
+                  </padding>
+                </HBox>
+                <TableView id="partsTable" fx:id="productsTable" prefHeight="528.0" prefWidth="396.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0">
+                  <columns>
+                    <TableColumn text="ID" fx:id="productsIDColumn" />
+                    <TableColumn text="Name" fx:id="productsNameColumn" />
+                    <TableColumn text="Inventory Level" fx:id="productsInventoryColumn" />
+                    <TableColumn text="Price per Unit" fx:id="productsPriceColumn" />
+                  </columns>
+                </TableView>
+                <HBox prefHeight="-1.0" prefWidth="-1.0" spacing="4.0" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="8.0">
+                  <children>
+                    <Button id="partsAddButton" fx:id="productsAddButton" mnemonicParsing="false" onAction="#addProduct" text="Add" />
+                    <Button id="partsModifyButton" fx:id="productsModifyButton" mnemonicParsing="false" onAction="#modifyProduct" text="Modify" />
+                    <Button fx:id="productsDeleteButton" mnemonicParsing="false" onAction="#deleteProduct" text="Delete" />
+                  </children>
+                </HBox>
+              </children>
+            </AnchorPane>
+          </items>
+        </SplitPane>
+        <HBox alignment="TOP_RIGHT" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="NEVER">
+          <children>
+            <Button mnemonicParsing="false" onAction="#exit" text="Exit" />
+          </children>
+          <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="2.0" />
+          </padding>
+        </HBox>
+      </children>
+    </VBox>
+  </children>
+</AnchorPane>
