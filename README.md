@@ -2,9 +2,7 @@
  
 This was a school project for building an inventory management application. Below are some notes I compiled for the evaluator after completing it:
 
---------------------------------------------------------------------------------
-  What the requirements specify
---------------------------------------------------------------------------------
+## What the requirements specify
 
 Parts & Products
 - inventory level cannot be lower than the minimum
@@ -29,9 +27,7 @@ Miscellaneous
 - all delete and cancel actions require a confirmation dialog
 
 
---------------------------------------------------------------------------------
-  What the requirements do not specify
---------------------------------------------------------------------------------
+## What the requirements do not specify
 
 Parts & Products
 - whether the min and max fields can be lower or higher than the current
@@ -56,9 +52,7 @@ Products
 - whether a part can be associated with it more than once
 
 
---------------------------------------------------------------------------------
-  Assumptions I've Made
---------------------------------------------------------------------------------
+## Assumptions I've Made
 
 it's generally a bad idea to make assumptions, but for the sake of completeness,
 I've done just that about missing specifications
@@ -92,9 +86,7 @@ Products
       so it follows that a part can be associated only once
 
 
---------------------------------------------------------------------------------
-  Liberties I've Taken
---------------------------------------------------------------------------------
+## Liberties I've Taken
 
 - I made the following deviations from the UML diagram:
     - quite a few added properties and methods and whatnot
